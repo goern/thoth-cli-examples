@@ -4,9 +4,8 @@ Thoth's TensorFlow stack guidance example
 **See different branches for different examples**
 
 This is an example of an application which uses Thoth's recommendations to
-recommend a TensorFlow stack for a specific hardware. The application is
-showing one of the `Integration of Thoth
-<https://pypi.org/project/thamos>`_ using Thamos CLI.
+recommend a TensorFlow and Flask stack for a specific hardware. The application is
+showing one of the `Integration of Thoth <https://pypi.org/project/thamos>`_ using Thamos CLI.
 
 For OpenShift s2i (Source-To-Image) examples, visit `thoth-station/s2i-example
 <https://github.com/thoth-station/s2i-example>`__ repository.
@@ -22,6 +21,7 @@ install Thamos CLI:
 .. code-block:: console
 
   git clone https://github.com/thoth-station/cli-example.git && cd cli-example
+  git checkout add-flask
   pip3 install thamos
   thamos --help
 
@@ -74,6 +74,9 @@ activated):
 .. code-block:: console
 
   python3 ./app.py
+
+As this application also starts a web server on port 8080, also try to open http://0.0.0.0:8080/v2/ in your browser.
+If you are done browsing the web, stop the server via ctrl-c.
 
 To browse Thoth's logs during or after the adviser run:
 
